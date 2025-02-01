@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+  }
+  nav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    background-color: black;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    color: white;
+    padding: 5px 10px;
+  }
+  nav a:hover {
+    background-color: paleturquoise;
+  }
+  */mengatur kolom konten/section .main 
+  .main {
+    margin-left: 160px; */pastikan lebarnya sama dengan lebar side nav
+    padding: 5px 10px;
+  }
+  */mengatur ukuran elemen logo
+  .logo{
+    height:30px;
+  }

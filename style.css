@@ -5,7 +5,18 @@ body {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            animation: fadeIn 1.5s ease-out;
         }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         nav {
             height: 100vh;
             width: 250px;
@@ -16,14 +27,36 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            animation: slideIn 0.7s ease-out;
         }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-250px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+
         nav .logo {
             text-align: center;
             font-size: 26px;
             font-weight: bold;
             color: white;
             margin-bottom: 20px;
+            animation: bounce 1.2s infinite;
         }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
         nav a {
             display: block;
             color: white;
@@ -33,40 +66,100 @@ body {
             transition: background 0.3s;
             width: 100%;
             text-align: center;
+            animation: fadeInLinks 1s ease-out;
         }
+
+        @keyframes fadeInLinks {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         nav a:hover {
             background-color: #5fb6a6;
         }
+
         .main {
             margin-left: 260px;
             padding: 20px;
             width: calc(100% - 260px);
             flex-grow: 1;
+            animation: fadeInMain 1.5s ease-out;
         }
+
+        @keyframes fadeInMain {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         .home, .content {
             text-align: center;
+            animation: scaleUp 0.5s ease-out;
         }
+
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
         .home img, .content img {
             max-width: 80%;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            animation: zoomIn 0.5s ease-out;
         }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
         .home img:hover, .content img:hover {
             transform: scale(1.05);
         }
+
         h2 {
             color: #815f42;
             font-size: 28px;
+            animation: fadeInText 0.8s ease-out;
         }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
         p {
             font-size: 18px;
             color: #4a3b30;
             line-height: 1.6;
+            animation: fadeInText 1s ease-out;
         }
+
         .buttons {
             margin-top: 20px;
         }
+
         .btn {
             padding: 12px 20px;
             background-color: #81D8D0;
@@ -78,7 +171,18 @@ body {
             transition: background 0.3s;
             margin: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: buttonPop 0.3s ease-out;
         }
+
+        @keyframes buttonPop {
+            0% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
         .btn:hover {
             background-color: #5fb6a6;
         }
@@ -88,6 +192,16 @@ body {
             padding: 10px 0;
             text-align: center;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+            animation: slideUp 0.7s ease-out;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
         }
 
         footer p {
